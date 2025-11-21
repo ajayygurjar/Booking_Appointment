@@ -1,10 +1,11 @@
-
-
-const express=require('express');
-const app=express();
+const express = require("express");
+const app = express();
+const sequelize = reqire("./utils/db-connection.js");
 app.use(express.json());
 
 
-app.listen(3000,(req,res)=>{
-    console.log(`server is running`);
+
+
+sequelize.sync({ alter: true }).then(() => {
+  app.listen(5000, () => console.log("Server running on port 5000"));
 });
