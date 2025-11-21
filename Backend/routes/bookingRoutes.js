@@ -3,6 +3,8 @@ const routes=express.Router();
 
 
 
-routes.post();
-routes.get();
-routes.delete();
+routes.post('/add',);
+routes.get('/get',);
+routes.delete('/delete/:id',);
+
+module.exports = router;
